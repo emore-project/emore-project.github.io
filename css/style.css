@@ -1,0 +1,71 @@
+:root{
+  --ink:#1F2F44; --slate:#34495E; --mist:#9FB4C7; --aqua:#4FB3BF; --amber:#E9A23B;
+  --paper:#DCE4EC; --night:#17222F; --sub:#4A5F78; --white:#fff;
+  --serif:Cambria,"Iowan Old Style",Georgia,serif;
+  --sans:Calibri,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --max:68rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:1.0625rem/1.65 var(--sans);color:var(--ink);background:#F6F9FB}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--slate);text-underline-offset:.2em}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(var(--max),100% - 2rem);margin-inline:auto}
+
+/* header */
+.site-header{background:var(--night);color:var(--white);position:sticky;top:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem;flex-wrap:wrap}
+.brand img{height:3.4rem;width:auto}
+.nav{display:flex;gap:.25rem;flex-wrap:wrap}
+.nav a{color:var(--paper);text-decoration:none;padding:.45rem .85rem;border-radius:999px;font-weight:600;font-size:.98rem}
+.nav a:hover{background:var(--slate);color:var(--white)}
+.nav a[aria-current="page"]{background:var(--amber);color:var(--night)}
+
+/* hero */
+.hero{background:radial-gradient(120% 140% at 85% 0%,var(--slate) 0%,var(--ink) 45%,var(--night) 100%);color:var(--white);padding:clamp(3.5rem,9vw,7rem) 0}
+.hero h1{font:700 clamp(2.2rem,5.5vw,3.8rem)/1.1 var(--serif);margin:0 0 1rem;max-width:20ch}
+.hero p.lead{font-size:clamp(1.1rem,2vw,1.35rem);color:var(--paper);max-width:46rem;margin:0 0 1.75rem}
+.eyebrow{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--amber);margin:0 0 .9rem}
+.btn{display:inline-block;background:var(--amber);color:var(--night);font-weight:700;text-decoration:none;padding:.7rem 1.3rem;border-radius:.5rem}
+.btn:hover{background:#f2b45a;color:var(--night)}
+.btn.ghost{background:transparent;color:var(--white);border:2px solid var(--mist);margin-left:.5rem}
+.btn.ghost:hover{background:var(--slate);color:var(--white)}
+
+/* page title (inner pages) */
+.page-head{background:var(--ink);color:var(--white);padding:clamp(2.2rem,5vw,3.6rem) 0}
+.page-head h1{font:700 clamp(1.9rem,4vw,2.7rem)/1.15 var(--serif);margin:0}
+.page-head p{color:var(--paper);margin:.6rem 0 0;max-width:44rem}
+
+main section{padding:clamp(2.2rem,5vw,3.8rem) 0}
+h2{font:700 clamp(1.5rem,3vw,2rem)/1.2 var(--serif);margin:0 0 1rem;color:var(--ink)}
+h3{font:700 1.2rem/1.3 var(--serif);margin:0 0 .4rem;color:var(--ink)}
+p{margin:0 0 1rem;max-width:46rem}
+
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--white);border:1px solid var(--paper);border-top:4px solid var(--aqua);border-radius:.6rem;padding:1.25rem 1.3rem}
+.card:nth-child(even){border-top-color:var(--amber)}
+.card p{margin:0;color:var(--sub);font-size:1rem}
+.card a.more{display:inline-block;margin-top:.7rem;font-weight:700}
+.band{background:var(--paper)}
+.facts{display:grid;gap:1px;background:var(--mist);border:1px solid var(--mist);border-radius:.6rem;overflow:hidden;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
+.facts div{background:var(--white);padding:1rem 1.2rem}
+.facts dt{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);margin:0}
+.facts dd{margin:.25rem 0 0;font:700 1.15rem/1.3 var(--serif);color:var(--ink)}
+.facts{margin:0}
+
+.logos{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;margin:1.5rem 0}
+.logos img{height:3.6rem;width:auto}
+.ack{background:var(--white);border-left:5px solid var(--amber);padding:1rem 1.3rem;border-radius:.3rem;font-size:1.05rem;max-width:46rem}
+.note{color:var(--sub);font-size:.95rem}
+
+/* footer */
+.site-footer{background:var(--night);color:var(--mist);padding:2.2rem 0;font-size:.95rem}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between}
+.site-footer p{margin:0;max-width:34rem}
+.site-footer img{height:3rem;width:auto}
+.site-footer .flogos{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;background:var(--white);padding:.7rem 1rem;border-radius:.5rem}
+
+@media (max-width:40rem){.btn.ghost{margin:.6rem 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
