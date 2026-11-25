@@ -14,23 +14,39 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<script src="assets/js/a11y.js"></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <header class="site-header"><div class="wrap">
-<a class="brand" href="index.html" aria-label="E-MORE home"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations" width="800" height="229"></a>
+<a class="brand" href="index.html"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations, home" width="800" height="229"></a>
+<div class="head-right">
 <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="funding.html" aria-current="page">Funding</a></nav>
+<div class="a11y">
+<button type="button" id="a11y-btn" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5h14M12 8.5v5M12 13.5l-3.5 6.5M12 13.5l3.5 6.5"/></svg><span>Accessibility</span></button>
+<div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
+<p id="a11y-title" class="a11y-title">Display options</p>
+<label><input type="checkbox" data-opt="contrast"> High contrast</label>
+<label><input type="checkbox" data-opt="text"> Larger text</label>
+<label><input type="checkbox" data-opt="spacing"> Wider text spacing</label>
+<label><input type="checkbox" data-opt="links"> Underline all links</label>
+<div class="a11y-actions"><button type="button" id="a11y-reset" class="a11y-reset">Reset</button><a href="accessibility.html">Accessibility statement</a></div>
+</div>
+</div>
+</div>
 </div></header>
-<main>
+<main id="main" tabindex="-1">
 <div class="page-head"><div class="wrap"><h1>Funding</h1><p>Institutions and funding bodies behind E-MORE.</p></div></div>
 <section><div class="wrap">
 <h2>Funded by</h2>
-<p>E-MORE is a project of the call “Proyectos de Generación de Conocimiento 2025”, funded by the Spanish Ministry of Science, Innovation and Universities and the State Research Agency, and co-funded by the European Union through the European Social Fund Plus (ESF+). It is hosted by the Universitat de Barcelona.</p>
-<div class="logos"><img src="assets/logos/micin-ue-aei.png" alt="Ministerio de Ciencia, Innovación y Universidades · Cofinanciado por la Unión Europea · Agencia Estatal de Investigación"><img src="assets/logos/ub.png" alt="Universitat de Barcelona"></div>
+<p>E-MORE is a project of the call “<span lang="es">Proyectos de Generación de Conocimiento 2025</span>”, funded by the Spanish Ministry of Science, Innovation and Universities and the State Research Agency, and co-funded by the European Union through the European Social Fund Plus (ESF+). It is hosted by the Universitat de Barcelona.</p>
+<div class="logos"><img src="assets/logos/micin-ue-aei.png" alt="Spanish Ministry of Science, Innovation and Universities; co-funded by the European Union; State Research Agency" width="2521" height="369"><img src="assets/logos/ub.png" alt="Universitat de Barcelona" width="1734" height="465"></div>
 </div></section>
 </main>
 <footer class="site-footer"><div class="wrap">
 <p>E-MORE – Efficient Models of Multimodal Representations. Grant PID2025-170489NB-I00 funded by MICIU/AEI/10.13039/501100011033 and by ESF+. Universitat de Barcelona, Facultat de Matemàtiques i Informàtica.</p>
-<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="Ministerio de Ciencia, Innovación y Universidades · Cofinanciado por la Unión Europea · Agencia Estatal de Investigación"><img src="assets/logos/ub.png" alt="Universitat de Barcelona"></div>
+<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="" width="2521" height="369"><img src="assets/logos/ub.png" alt="" width="1734" height="465"></div>
+<nav class="foot-nav" aria-label="Footer"><ul><li><a href="accessibility.html">Accessibility statement</a></li><li><a href="https://github.com/emore-project/emore-project.github.io">Website source on GitHub</a></li></ul></nav>
 </div></footer>
 </body>
 </html>

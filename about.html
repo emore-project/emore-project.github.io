@@ -14,13 +14,28 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<script src="assets/js/a11y.js"></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <header class="site-header"><div class="wrap">
-<a class="brand" href="index.html" aria-label="E-MORE home"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations" width="800" height="229"></a>
+<a class="brand" href="index.html"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations, home" width="800" height="229"></a>
+<div class="head-right">
 <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="research.html">Research</a><a href="funding.html">Funding</a></nav>
+<div class="a11y">
+<button type="button" id="a11y-btn" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5h14M12 8.5v5M12 13.5l-3.5 6.5M12 13.5l3.5 6.5"/></svg><span>Accessibility</span></button>
+<div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
+<p id="a11y-title" class="a11y-title">Display options</p>
+<label><input type="checkbox" data-opt="contrast"> High contrast</label>
+<label><input type="checkbox" data-opt="text"> Larger text</label>
+<label><input type="checkbox" data-opt="spacing"> Wider text spacing</label>
+<label><input type="checkbox" data-opt="links"> Underline all links</label>
+<div class="a11y-actions"><button type="button" id="a11y-reset" class="a11y-reset">Reset</button><a href="accessibility.html">Accessibility statement</a></div>
+</div>
+</div>
+</div>
 </div></header>
-<main>
+<main id="main" tabindex="-1">
 <div class="page-head"><div class="wrap"><h1>About E-MORE</h1><p>Efficient Models of Multimodal Representations</p></div></div>
 <section><div class="wrap">
 <h2>Why this project</h2>
@@ -34,12 +49,13 @@
 <section class="band"><div class="wrap">
 <h2>From large to compact</h2>
 <p>A central idea of the project is to transfer the knowledge of very large multimodal models into compact ones that are cheaper to adapt, easier to deploy and more robust.</p>
-<div class="panel-wrap panel"><img src="assets/img/distill.svg" alt="A large multimodal model is distilled into a compact model that keeps most of its knowledge" width="900" height="360"></div>
+<div class="panel-wrap panel"><picture><source media="(max-width:40rem)" srcset="assets/img/distill-mobile.svg"><img src="assets/img/distill.svg" alt="Diagram: a large multimodal model, costly to adapt and run, is distilled into a compact model that is efficient, robust and adaptable." width="900" height="360"></picture></div>
 </div></section>
 </main>
 <footer class="site-footer"><div class="wrap">
 <p>E-MORE – Efficient Models of Multimodal Representations. Grant PID2025-170489NB-I00 funded by MICIU/AEI/10.13039/501100011033 and by ESF+. Universitat de Barcelona, Facultat de Matemàtiques i Informàtica.</p>
-<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="Ministerio de Ciencia, Innovación y Universidades · Cofinanciado por la Unión Europea · Agencia Estatal de Investigación"><img src="assets/logos/ub.png" alt="Universitat de Barcelona"></div>
+<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="" width="2521" height="369"><img src="assets/logos/ub.png" alt="" width="1734" height="465"></div>
+<nav class="foot-nav" aria-label="Footer"><ul><li><a href="accessibility.html">Accessibility statement</a></li><li><a href="https://github.com/emore-project/emore-project.github.io">Website source on GitHub</a></li></ul></nav>
 </div></footer>
 </body>
 </html>

@@ -14,13 +14,28 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<script src="assets/js/a11y.js"></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <header class="site-header"><div class="wrap">
-<a class="brand" href="index.html" aria-label="E-MORE home"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations" width="800" height="229"></a>
+<a class="brand" href="index.html"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations, home" width="800" height="229"></a>
+<div class="head-right">
 <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="funding.html">Funding</a></nav>
+<div class="a11y">
+<button type="button" id="a11y-btn" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5h14M12 8.5v5M12 13.5l-3.5 6.5M12 13.5l3.5 6.5"/></svg><span>Accessibility</span></button>
+<div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
+<p id="a11y-title" class="a11y-title">Display options</p>
+<label><input type="checkbox" data-opt="contrast"> High contrast</label>
+<label><input type="checkbox" data-opt="text"> Larger text</label>
+<label><input type="checkbox" data-opt="spacing"> Wider text spacing</label>
+<label><input type="checkbox" data-opt="links"> Underline all links</label>
+<div class="a11y-actions"><button type="button" id="a11y-reset" class="a11y-reset">Reset</button><a href="accessibility.html">Accessibility statement</a></div>
+</div>
+</div>
+</div>
 </div></header>
-<main>
+<main id="main" tabindex="-1">
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-text">
 <p class="eyebrow">Research project · Universitat de Barcelona</p>
@@ -28,15 +43,15 @@
 <p class="lead">E-MORE studies how to build multimodal AI models that are compact, adaptable and trustworthy, so that they can learn from and reason about vision, language, audio and more without prohibitive computational cost.</p>
 <a class="btn" href="about.html">About the project</a><a class="btn ghost" href="research.html">Research lines</a>
 </div>
-<div class="hero-visual"><picture><source media="(max-width:48rem)" srcset="assets/img/converge-mobile.svg"><img src="assets/img/converge.svg" alt="Vision, text, audio, skeleton and 3D data converge into one efficient shared representation that is compact, adaptable and trustworthy" width="960" height="420"></picture></div>
+<div class="hero-visual"><picture><source media="(max-width:48rem)" srcset="assets/img/converge-mobile.svg"><img src="assets/img/converge.svg" alt="Diagram: vision, text, audio, skeleton and 3D data converge into one efficient shared representation that is compact, adaptable and trustworthy." width="960" height="420"></picture></div>
 </div></section>
 <section><div class="wrap">
 <h2>What E-MORE is about</h2>
 <div class="pillars">
-<div class="card pillar"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Efficient</h3><p>Smaller, cheaper models that keep their performance.</p></div>
-<div class="card pillar"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><h3>Adaptable</h3><p>Quick specialization to new tasks and modalities.</p></div>
-<div class="card pillar"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M12 7v4M12 11H6v6M12 11h6v6"/></svg></span><h3>Structured</h3><p>Representations that capture hierarchy and meaning.</p></div>
-<div class="card pillar"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg></span><h3>Trustworthy</h3><p>Privacy, unlearning and auditability by design.</p></div>
+<div class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><h3>Efficient</h3><p>Smaller, cheaper models that keep their performance.</p></div>
+<div class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 6h8M18 6h2M4 12h2M12 12h8M4 18h10M20 18h0"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><h3>Adaptable</h3><p>Quick specialization to new tasks and modalities.</p></div>
+<div class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M12 7v4M12 11H6v6M12 11h6v6"/></svg></span><h3>Structured</h3><p>Representations that capture hierarchy and meaning.</p></div>
+<div class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg></span><h3>Trustworthy</h3><p>Privacy, unlearning and auditability by design.</p></div>
 </div>
 </div></section>
 <section class="band"><div class="wrap">
@@ -51,14 +66,15 @@
 <section><div class="wrap">
 <h2>Explore</h2>
 <div class="grid">
-<div class="card"><h3>About</h3><p>The motivation, the goals and the setting of the project.</p><a class="more" href="about.html">Read more</a></div>
-<div class="card"><h3>Research</h3><p>The scientific lines that E-MORE pursues, from efficient adaptation to trustworthy AI.</p><a class="more" href="research.html">Read more</a></div>
-<div class="card"><h3>Funding</h3><p>The funding bodies and the host institution of the project.</p><a class="more" href="funding.html">Read more</a></div>
+<div class="card"><h3>About</h3><p>The motivation, the goals and the setting of the project.</p><a class="more" href="about.html">Read more<span class="sr-only"> about the project</span></a></div>
+<div class="card"><h3>Research</h3><p>The scientific lines that E-MORE pursues, from efficient adaptation to trustworthy AI.</p><a class="more" href="research.html">Read more<span class="sr-only"> about the research lines</span></a></div>
+<div class="card"><h3>Funding</h3><p>The funding bodies and the host institution of the project.</p><a class="more" href="funding.html">Read more<span class="sr-only"> about the funding</span></a></div>
 </div></div></section>
 </main>
 <footer class="site-footer"><div class="wrap">
 <p>E-MORE – Efficient Models of Multimodal Representations. Grant PID2025-170489NB-I00 funded by MICIU/AEI/10.13039/501100011033 and by ESF+. Universitat de Barcelona, Facultat de Matemàtiques i Informàtica.</p>
-<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="Ministerio de Ciencia, Innovación y Universidades · Cofinanciado por la Unión Europea · Agencia Estatal de Investigación"><img src="assets/logos/ub.png" alt="Universitat de Barcelona"></div>
+<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="" width="2521" height="369"><img src="assets/logos/ub.png" alt="" width="1734" height="465"></div>
+<nav class="foot-nav" aria-label="Footer"><ul><li><a href="accessibility.html">Accessibility statement</a></li><li><a href="https://github.com/emore-project/emore-project.github.io">Website source on GitHub</a></li></ul></nav>
 </div></footer>
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility statement · E-MORE</title>
+<meta name="description" content="Accessibility statement of the E-MORE website: standard, current status, available options and how to report problems.">
+<meta property="og:title" content="Accessibility statement · E-MORE">
+<meta property="og:description" content="Accessibility statement of the E-MORE website: standard, current status, available options and how to report problems.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://emore-project.github.io/assets/og-image.png">
+<meta name="theme-color" content="#17222F">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<script src="assets/js/a11y.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html"><img src="assets/logos/emore-dark-800.png" alt="E-MORE – Efficient Models of Multimodal Representations, home" width="800" height="229"></a>
+<div class="head-right">
+<nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="funding.html">Funding</a></nav>
+<div class="a11y">
+<button type="button" id="a11y-btn" class="a11y-btn" aria-expanded="false" aria-controls="a11y-panel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="2"/><path d="M5 8.5h14M12 8.5v5M12 13.5l-3.5 6.5M12 13.5l3.5 6.5"/></svg><span>Accessibility</span></button>
+<div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
+<p id="a11y-title" class="a11y-title">Display options</p>
+<label><input type="checkbox" data-opt="contrast"> High contrast</label>
+<label><input type="checkbox" data-opt="text"> Larger text</label>
+<label><input type="checkbox" data-opt="spacing"> Wider text spacing</label>
+<label><input type="checkbox" data-opt="links"> Underline all links</label>
+<div class="a11y-actions"><button type="button" id="a11y-reset" class="a11y-reset">Reset</button><a href="accessibility.html">Accessibility statement</a></div>
+</div>
+</div>
+</div>
+</div></header>
+<main id="main" tabindex="-1">
+<div class="page-head"><div class="wrap"><h1>Accessibility statement</h1><p>Last reviewed: 25 November 2026</p></div></div>
+<section><div class="wrap">
+<h2>Our commitment</h2>
+<p>We want the E-MORE website to be usable by everyone. We design it to meet the Web Content Accessibility Guidelines (WCAG) 2.2, level AA.</p>
+<h2>Current status</h2>
+<p>This is a <strong>self-assessment</strong>; the website has not been audited or certified by an external body. We believe it meets WCAG 2.2 AA for the checks below, with the limitations listed further down.</p>
+<h3>How it was checked</h3>
+<ul class="plain">
+<li>Automated tests with axe-core on every page.</li>
+<li>Calculation of colour contrast for all text and interface colours, in the default and in the high-contrast display.</li>
+<li>Manual review of structure: headings, landmarks, links, images and keyboard navigation.</li>
+</ul>
+<h2>What you can do on this site</h2>
+<ul class="plain">
+<li><strong>Display options</strong> (button “Accessibility” in the header): high contrast, larger text, wider text spacing and underlined links. Your choice is remembered in your browser.</li>
+<li>High contrast turns on automatically if your system asks for more contrast.</li>
+<li>Skip link to jump to the main content, and a visible focus indicator for keyboard use.</li>
+<li>All pages work with the keyboard alone, with browser zoom up to 200 % and on small screens.</li>
+<li>Images and diagrams have text descriptions. No content moves or plays automatically.</li>
+</ul>
+<h2>Known limitations</h2>
+<ul class="plain">
+<li>We have not yet tested with screen readers on every platform.</li>
+<li>Diagrams are described in text, but the description is a summary of what they show.</li>
+<li>The names of some institutions and calls are in Spanish; text is marked with its language, but image descriptions are not.</li>
+</ul>
+<h2>Report a problem</h2>
+<p>If you find a barrier or need information in another format, please tell us by opening an issue at <a href="https://github.com/emore-project/emore-project.github.io/issues">the project’s issue tracker on GitHub</a>. Describe the page and the difficulty you had.</p>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<p>E-MORE – Efficient Models of Multimodal Representations. Grant PID2025-170489NB-I00 funded by MICIU/AEI/10.13039/501100011033 and by ESF+. Universitat de Barcelona, Facultat de Matemàtiques i Informàtica.</p>
+<div class="flogos"><img src="assets/logos/micin-ue-aei.png" alt="" width="2521" height="369"><img src="assets/logos/ub.png" alt="" width="1734" height="465"></div>
+<nav class="foot-nav" aria-label="Footer"><ul><li><a href="accessibility.html">Accessibility statement</a></li><li><a href="https://github.com/emore-project/emore-project.github.io">Website source on GitHub</a></li></ul></nav>
+</div></footer>
+</body>
+</html>
