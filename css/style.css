@@ -64,7 +64,7 @@ p{margin:0 0 1rem;max-width:46rem}
 .site-footer{background:var(--night);color:var(--mist);padding:2.2rem 0;font-size:.95rem}
 .site-footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between}
 .site-footer p{margin:0;max-width:34rem}
-.site-footer img{height:3rem;width:auto}
+.site-footer img{height:2.6rem;width:auto}
 .site-footer .flogos{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;background:var(--white);padding:.7rem 1rem;border-radius:.5rem}
 
 @media (max-width:40rem){.btn.ghost{margin:.6rem 0 0}}
