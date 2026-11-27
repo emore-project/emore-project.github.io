@@ -158,6 +158,8 @@ RESEARCH = [
  ("Albert Clapés", "Researcher", "Assistant Professor", "0000-0002-4089-9060", ""),
  ("Julio C. S. Jacques Junior", "Researcher", "Assistant Professor", "0000-0001-6785-7146", ""),
  ("Muriel Rovira-Esteva", "Researcher", "Assistant Professor", "0000-0003-0331-258X", ""),
+ ("Meysam Madadi", "Researcher", "", "0000-0002-7384-5712", ""),
+ ("Cristina Palmero", "Researcher", "King\u2019s College London", "0000-0002-6085-6527", ""),
 ]
 WORK = [
  ("Artur Xarles", "Universitat de Barcelona", "0000-0002-0800-0270", ""),
@@ -169,8 +171,6 @@ WORK = [
  ("Marc Soler-Bages", "", "0000-0001-8039-7842", ""),
  ("Arnau Barrera", "", "0009-0008-4594-3965", ""),
  ("Oriol Rabasseda", "", "0009-0007-5121-1317", ""),
- ("Meysam Madadi", "", "0000-0002-7384-5712", ""),
- ("Cristina Palmero", "King\u2019s College London", "0000-0002-6085-6527", ""),
 ]
 def member(name, line1, line2, orcid, url):
     nm = f'<a href="{url}">{name}</a>' if url else name
@@ -182,12 +182,12 @@ wteam = "".join(member(n, a, "", o, u) for n, a, o, u in WORK)
 write("team.html", "Team", "The research team and the work team of the E-MORE project at the Universitat de Barcelona.", f'''<div class="page-head"><div class="wrap"><h1>Team</h1><p>The people behind E-MORE, at the Universitat de Barcelona and partner institutions.</p></div></div>
 <section><div class="wrap">
 <h2>Research team</h2>
-<p>Faculty of the Universitat de Barcelona who lead and carry out the research of the project.</p>
+<p>Doctors who lead and carry out the research of the project.</p>
 <ul class="grid team">{rteam}</ul>
 </div></section>
 <section class="band"><div class="wrap">
 <h2>Work team</h2>
-<p>Early-career researchers and collaborators who contribute to the work of the project.</p>
+<p>Researchers who contribute to the work of the project and are completing their doctoral training.</p>
 <ul class="grid team">{wteam}</ul>
 </div></section>''')
 
