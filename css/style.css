@@ -136,3 +136,9 @@ html[data-contrast="high"] .skip{background:#FFD600;color:#000}
 
 /* small screens: the header is tall, so it must not stay fixed over the content */
 @media (max-width:48rem){.site-header{position:static}html{scroll-padding-top:1rem}.brand img{height:3.2rem}.nav a{padding:.5rem .7rem}}
+
+/* Team */
+ul.team{list-style:none;margin:1.25rem 0 0;padding:0}
+.member h3{margin:0 0 .25rem;font-size:1.1rem}
+.member .role{margin:0;color:var(--muted);font-size:.95rem}
+.member a.orcid{display:inline-block;margin-top:.5rem;padding-block:.5rem;font-size:.9rem;font-weight:700}

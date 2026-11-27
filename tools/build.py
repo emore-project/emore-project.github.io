@@ -2,7 +2,7 @@
 """Generate the static pages (header, footer and accessibility options are shared). Run: python3 tools/build.py"""
 import os, random, math
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAV = [("index.html", "Home"), ("about.html", "About"), ("research.html", "Research"), ("funding.html", "Funding")]
+NAV = [("index.html", "Home"), ("about.html", "About"), ("research.html", "Research"), ("team.html", "Team"), ("funding.html", "Funding")]
 UPDATED = "25 November 2026"
 
 def svgicon(p): return f'<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">{p}</svg></span>'
@@ -140,6 +140,55 @@ write("research.html", "Research", "The research lines of E-MORE: efficient adap
 <h2>Research lines</h2>
 <div class="panel hide-sm"><img src="assets/img/hub.svg" alt="Diagram: the five research lines of E-MORE (efficient adaptation, multimodal distillation, reinforcement learning, structured representations and trustworthy AI) arranged around the project." width="1040" height="480"></div>
 <div class="grid" style="margin-top:2rem">{cardhtml}</div>
+</div></section>''')
+
+
+# ---- team
+# url: personal web page (add later); orcid: public ORCID iD. Source: project proposal.
+RESEARCH = [
+ ("Sergio Escalera", "Principal investigator", "Full Professor", "0000-0003-0617-8873", ""),
+ ("Xavier Baró", "Principal investigator", "Associate Professor", "0000-0001-5338-3007", ""),
+ ("Jordi Vitrià", "Researcher", "Full Professor", "0000-0003-1484-539X", ""),
+ ("Oriol Pujol", "Researcher", "Full Professor", "0000-0001-7573-009X", ""),
+ ("Laura Igual", "Researcher", "Associate Professor", "0000-0002-7225-7441", ""),
+ ("Mireia Ribera", "Researcher", "Associate Professor", "0000-0003-1455-1869", ""),
+ ("Santi Segui", "Researcher", "Associate Professor", "0000-0002-8603-138X", ""),
+ ("Eloi Puertas", "Researcher", "Lecturer", "0000-0001-6292-6448", ""),
+ ("Nahuel Statuto", "Researcher", "Assistant Professor", "0000-0002-0062-760X", ""),
+ ("Albert Clapés", "Researcher", "Assistant Professor", "0000-0002-4089-9060", ""),
+ ("Julio C. S. Jacques Junior", "Researcher", "Assistant Professor", "0000-0001-6785-7146", ""),
+ ("Muriel Rovira", "Researcher", "Assistant Professor", "0000-0003-0331-258X", ""),
+]
+WORK = [
+ ("Artur Xarles", "Universitat de Barcelona", "0000-0002-0800-0270", ""),
+ ("David Pujol-Perich", "", "0000-0001-8853-8486", ""),
+ ("Phat Truong", "", "0009-0009-1188-0051", ""),
+ ("Michal Choinski", "", "0009-0004-1545-0108", ""),
+ ("Iñaki Erregue", "", "0009-0004-1943-5554", ""),
+ ("Oriol Camacho", "", "0000-0001-6950-7211", ""),
+ ("Marc Soler", "", "0000-0001-8039-7842", ""),
+ ("Arnau Barrera", "", "0009-0008-4594-3965", ""),
+ ("Oriol Rabasseda", "", "0009-0007-5121-1317", ""),
+ ("Meysam Madadi", "", "0000-0002-7384-5712", ""),
+ ("Cristina Palmero", "King\u2019s College London", "0000-0002-6085-6527", ""),
+]
+def member(name, line1, line2, orcid, url):
+    nm = f'<a href="{url}">{name}</a>' if url else name
+    meta = "".join(f'<p class="role">{x}</p>' for x in (line1, line2) if x)
+    oc = f'<a class="orcid" href="https://orcid.org/{orcid}">ORCID<span class="sr-only"> profile of {name}</span></a>' if orcid else ""
+    return f'<li class="card member"><h3>{nm}</h3>{meta}{oc}</li>'
+rteam = "".join(member(n, r, a, o, u) for n, r, a, o, u in RESEARCH)
+wteam = "".join(member(n, a, "", o, u) for n, a, o, u in WORK)
+write("team.html", "Team", "The research team and the work team of the E-MORE project at the Universitat de Barcelona.", f'''<div class="page-head"><div class="wrap"><h1>Team</h1><p>The people behind E-MORE, at the Universitat de Barcelona and partner institutions.</p></div></div>
+<section><div class="wrap">
+<h2>Research team</h2>
+<p>Faculty of the Universitat de Barcelona who lead and carry out the research of the project.</p>
+<ul class="grid team">{rteam}</ul>
+</div></section>
+<section class="band"><div class="wrap">
+<h2>Work team</h2>
+<p>Early-career researchers and collaborators who contribute to the work of the project.</p>
+<ul class="grid team">{wteam}</ul>
 </div></section>''')
 
 # ---- funding
